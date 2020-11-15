@@ -1,14 +1,16 @@
 <?php
 
 namespace App\Http\Livewire;
-
+use Livewire\WithFileUploads;
 use Auth;
 use Livewire\Component;
 use App\Models\Product;
-
+use Illuminate\Support\Facades\Storage;
 class Products extends Component
 {
-  public $products, $name, $description,$keywords,$product_id;//$image
+  use WithFileUploads;
+
+  public $products, $name, $description, $keywords, $product_id, $image;
   public $isOpen = 0;
 
   /**
@@ -63,7 +65,7 @@ class Products extends Component
     $this->description = '';
     $this->product_id = '';
     $this->keywords='';
-    //$this->image='';
+    $this->image='';
   }
 
   /**
@@ -77,18 +79,20 @@ class Products extends Component
       'name' => 'required',
       'description' => 'required',
       'keywords' => 'required',
+      'image' => 'required|image|max:2048',
     ]);
-
+    $imageName = $this->image->store('images', 'public');
     Product::updateOrCreate(['id' => $this->product_id], [
       'name' => $this->name,
       'description' => $this->description,
-      //'image'=>$this->image,
+      'image'=>Storage::url($imageName),//$this->image,
       'keywords'=>$this->keywords,
       'user_id'=>Auth::id()
     ]);
 
+
     session()->flash('message',
-    $this->product_id ? 'Producto actualizado satisfactoriamente.' : 'Productp creado satisfactoriamente.');
+    $this->product_id ? 'Producto actualizado satisfactoriamente.' : 'Producto creado satisfactoriamente.');
 
     $this->closeModal();
     $this->resetInputFields();
@@ -105,7 +109,7 @@ class Products extends Component
     $this->name = $Product->name;
     $this->description = $Product->description;
     $this->keywords = $Product->keywords;
-    //$this->image = $Product->image;
+    $this->image = $Product->image;
     $this->openModal();
   }
 

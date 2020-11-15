@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <div class="input-group mb-3">
-            <input v-model="query" type="text" class="form-control" placeholder="buscar por nombre o descripción"
+            <input v-model="query" type="text" id="p-search" class="form-control" placeholder="buscar por nombre o descripción"
                    aria-label="Nombre o descripción"
                    aria-describedby="basic-addon2">
             <div class="input-group-append">

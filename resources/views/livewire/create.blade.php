@@ -24,13 +24,11 @@
               <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="exampleFormControlInput2" wire:model="keywords" placeholder="Ingrese palabras clave para este producto"></textarea>
               @error('keywords') <span class="text-red-500">{{ $message }}</span>@enderror
             </div>
-            <!--
             <div class="mb-4">
-              <label for="exampleFormControlInput2" class="block text-gray-700 text-sm font-bold mb-2">Palabras clave:</label>
-              <input type="file" name="file" class="custom-file-input" id="image" wire:model="image" >
+              <label for="exampleFormControlInput2" class="block text-gray-700 text-sm font-bold mb-2">Imagen:</label>
+              <input type="file" name="image" class="custom-file-input" id="image" wire:model="image" >
               @error('keywords') <span class="text-red-500">{{ $message }}</span>@enderror
             </div>
-           -->
           </div>
         </div>
         <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">

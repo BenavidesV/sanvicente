@@ -26,3 +26,4 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 })->name('dashboard');
 
 Route::get('products', Products::class)->middleware('auth:sanctum');
+Route::get('image/{filename}', [ProductController::class,'showImage'])->name('displayImage');
