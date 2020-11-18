@@ -29,11 +29,6 @@ Table of contents
 /* ---------------------------------------------
 typography
 --------------------------------------------- */
-td.collapsable {display:none; }
-
-@media only screen and (min-width: 450px) {
-  td.collapsable {display:table-cell; }
-}
 #lateral-button{
   transform:rotateY(90)
 }
