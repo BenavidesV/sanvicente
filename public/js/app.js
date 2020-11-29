@@ -2012,7 +2012,7 @@ __webpack_require__.r(__webpack_exports__);
     query: {
       handler: _.debounce(function () {
         this.searchProducts();
-      }, 100)
+      }, 800)
     }
   },
   methods: {
@@ -26740,7 +26740,7 @@ var render = function() {
           "button",
           {
             staticClass: "btn btn-primary",
-            attrs: { type: "button" },
+            attrs: { id: "jose", type: "button" },
             on: {
               click: _vm.searchProducts,
               keyup: function($event) {

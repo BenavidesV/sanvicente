@@ -51,6 +51,9 @@
                         <x-jet-dropdown-link href="/products">
                             {{ __('Productos') }}
                         </x-jet-dropdown-link>
+                        <x-jet-dropdown-link href="/users">
+                            {{ __('Usuarios') }}
+                        </x-jet-dropdown-link>
 
                         @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
                             <x-jet-dropdown-link href="{{ route('api-tokens.index') }}">

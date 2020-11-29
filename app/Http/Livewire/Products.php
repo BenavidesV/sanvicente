@@ -1,16 +1,14 @@
 <?php
 
 namespace App\Http\Livewire;
-use Livewire\WithFileUploads;
+
 use Auth;
 use Livewire\Component;
 use App\Models\Product;
-use Illuminate\Support\Facades\Storage;
+
 class Products extends Component
 {
-  use WithFileUploads;
-
-  public $products, $name, $description, $keywords, $product_id, $image;
+  public $products, $name, $description,$keywords,$product_id, $image;
   public $isOpen = 0;
 
   /**
@@ -79,20 +77,18 @@ class Products extends Component
       'name' => 'required',
       'description' => 'required',
       'keywords' => 'required',
-      'image' => 'required|image|max:2048',
     ]);
-    $imageName = $this->image->store('images', 'public');
+
     Product::updateOrCreate(['id' => $this->product_id], [
       'name' => $this->name,
       'description' => $this->description,
-      'image'=>Storage::url($imageName),//$this->image,
+      'image'=>$this->image,
       'keywords'=>$this->keywords,
       'user_id'=>Auth::id()
     ]);
 
-
     session()->flash('message',
-    $this->product_id ? 'Producto actualizado satisfactoriamente.' : 'Producto creado satisfactoriamente.');
+    $this->product_id ? 'Producto actualizado satisfactoriamente.' : 'Productp creado satisfactoriamente.');
 
     $this->closeModal();
     $this->resetInputFields();

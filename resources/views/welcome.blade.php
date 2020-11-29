@@ -3,7 +3,7 @@
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
   <meta name="description" content="Pagina promocional de San Vicente Ciudad Quesada">
-  <meta name="keywords" content="San Vicente, naturaleza, agricultura, turismo, tusrismo sostenible, bosque, Ciudad Quesada, comida, tours">
+  <meta name="keywords" content="San Vicente, naturaleza, agricultura, turismo, turismo sostenible, bosque, Ciudad Quesada, comida, tours">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
   <meta name="author" content="Novlic">
 
@@ -150,7 +150,9 @@
         <div id="app">
           <searchbar></searchbar>
           <products></products>
+
         </div>
+        <button id="show-modal" @click="showModal = true">Show Modal</button>
         <div class="portfolio-grid portfolio-gallery grid-3 gutter" style="position: relative; height: 1162.64px;">
 
         </div>
@@ -218,7 +220,7 @@
         <ul class="social-link wow fadeInUp" style="visibility: hidden; animation-name: none;">
           <li><a href="https://www.facebook.com/SanVicenteCR#" target="_blank"><i class="fab fa-facebook"></i></a></li>
           <li><a href="https://www.instagram.com/sanvicentecr/#" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-          <li><a title="Inscribirse" href="/register" target="_blank"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-bounding-box-circles" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <li><a title="Inscribirse" href="/login" target="_blank"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-bounding-box-circles" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" d="M2 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zM0 2a2 2 0 0 1 3.937-.5h8.126A2 2 0 1 1 14.5 3.937v8.126a2 2 0 1 1-2.437 2.437H3.937A2 2 0 1 1 1.5 12.063V3.937A2 2 0 0 1 0 2zm2.5 1.937v8.126c.703.18 1.256.734 1.437 1.437h8.126a2.004 2.004 0 0 1 1.437-1.437V3.937A2.004 2.004 0 0 1 12.063 2.5H3.937A2.004 2.004 0 0 1 2.5 3.937zM14 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zM2 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm12 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
           </svg></a></li>
         </ul>
@@ -232,7 +234,8 @@
 
 <!--scripts-->
 <script async src="{{mix('js/app.js')}}"></script>
-<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 <script src="/assets/Devil/owl.carousel.min.js"></script>
 <script src="./assets/Devil/jquery.nav.js"></script>
 <script src="./assets/Devil/jquery.animateNumber.min.js"></script>
@@ -266,8 +269,13 @@
 <script src="./assets/Devil/scripts.js"></script>
 
 <script>
+
 function myFunction(e) {
   document.getElementById("p-search").value =e;
+
+
+  //document.getElementById("p-search").click();
+  //document.getElementById("jose").style.background='#000000';
 }
 $("[data-trigger]").on("click", function(e){
   e.preventDefault();

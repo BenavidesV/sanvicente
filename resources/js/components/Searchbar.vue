@@ -5,7 +5,7 @@
                    aria-label="Nombre o descripción"
                    aria-describedby="basic-addon2">
             <div class="input-group-append">
-                <button class="btn btn-primary" @click="searchProducts" @keyup.enter="searchProducts" type="button">
+                <button id="jose" class="btn btn-primary" @click="searchProducts" @keyup.enter="searchProducts" type="button">
                     Buscar
                 </button>
             </div>
@@ -25,7 +25,7 @@
             query: {
                 handler: _.debounce(function () {
                     this.searchProducts()
-                }, 100)
+                }, 800)
             }
         },
         methods: {
@@ -33,6 +33,7 @@
                 this.$store.dispatch('SEARCH_PRODUCTS', this.query)
             }
         }
+
     }
 </script>
 
