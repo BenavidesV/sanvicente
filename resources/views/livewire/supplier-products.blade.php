@@ -1,7 +1,9 @@
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
   <meta name="description" content="Pagina promocional de San Vicente Ciudad Quesada">
-  <meta name="keywords" content="San Vicente, naturaleza, agricultura, turismo, turismo sostenible, bosque, Ciudad Quesada, comida, tours">
+  <meta name="keywords" content="San Vicente, naturaleza, agricultura, turismo,
+  turismo sostenible, bosque, Ciudad Quesada, comida, tours, cultura, natural,
+  gente, comunidad">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
   <meta name="author" content="Novlic">
 
@@ -60,57 +62,60 @@
         <div class="container-fluid">
           <h1 class="text-center mb-3">Además se ofrece</h1>
           <div class="container">
+            <div class="row">
               <div class="row">
-                  <div class="row">
-                      <div class="col-md-3">
-                          <!-- Controls -->
-                          <div class="controls pull-right hidden-xs">
-                              <a class="left fa fa-chevron-left btn btn" href="#carousel-example"
-                                  data-slide="prev"></a><a class="right fa fa-chevron-right btn" href="#carousel-example"
-                                      data-slide="next"></a>
-                          </div>
-                      </div>
+                <div class="col-md-3">
+                  <!-- Controls -->
+                  <div class="controls pull-right hidden-xs">
+                    <a class="left fa fa-chevron-left btn btn" href="#carousel-example"
+                    data-slide="prev"></a><a class="right fa fa-chevron-right btn" href="#carousel-example"
+                    data-slide="next"></a>
                   </div>
-                  <div id="carousel-example" class="carousel slide hidden-xs" data-ride="carousel">
-                      <!-- Wrapper for slides -->
-                      <div class="carousel-inner">
-                          <div class="item active">
-                              <div class="row">
-                                @foreach($products as $index=>$product)
-                                  <div class="col-sm-3">
-                                      <div class="col-item">
-                                          <div class="info">
-                                              <div class="row">
-                                                  <div class="price col-md-6">
-                                                      <h5>{{ $product->name }}</h5>
-                                                  </div>
-                                                  <div class="rating hidden-sm col-md-6">
-                                                      <i class="fas fa-exclamation"></i>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                          <div class="photo">
-                                              <img src="{{ asset($product->image) }}" title="product.description" :alt="product.name" class="img-responsive" />
-                                          </div>
-                                          <div class="info">
-                                              <div class="separator clear-left">
-                                                  <p class="btn-add">
-                                                    {{$product->description}}
-                                                  </p>
-                                              </div>
-                                              <div class="clearfix">
-                                              </div>
-                                          </div>
-                                      </div>
-                                  </div>
-                                  @endforeach
-                          </div>
-
-                      </div>
-                  </div>
+                </div>
               </div>
+              <div id="carousel-example" class="carousel slide hidden-xs" data-ride="carousel">
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                  <div class="item active">
+                    <div class="row">
+                      @foreach($products as $index=>$product)
+                      @if ($product->id != $product1->id)
+                      <div class="col-sm-3">
+                        <div class="col-item">
+                          <div class="info">
+                            <div class="row">
+                              <div class="price col-md-6">
+                                <h5>{{ $product->name }}</h5>
+                              </div>
+                              <div class="rating hidden-sm col-md-6">
+                                <i class="fas fa-exclamation"></i>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="photo">
+                            <img src="{{ asset($product->image) }}" title="product.description" :alt="product.name" class="img-responsive" />
+                          </div>
+                          <div class="info">
+                            <div class="separator clear-left">
+                              <p class="btn-add">
+                                {{$product->description}}
+                              </p>
+                            </div>
+                            <div class="clearfix">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      @endif
+
+                      @endforeach
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
         </div>
       </div>
     </div>
@@ -118,105 +123,105 @@
   <style>
   .col-item
   {
-      border: 2px solid #2323A1;
-      border-radius: 5px;
-      background: #FFF;
+    border: 2px solid #2323A1;
+    border-radius: 5px;
+    background: #FFF;
   }
   .col-item .photo img
   {
-      margin: 0 auto;
-      width: 100%;
+    margin: 0 auto;
+    width: 100%;
   }
 
   .col-item .info
   {
-      padding: 10px;
-      border-radius: 0 0 5px 5px;
-      margin-top: 1px;
+    padding: 10px;
+    border-radius: 0 0 5px 5px;
+    margin-top: 1px;
   }
   .col-item:hover .info {
-      background-color: rgba(215, 215, 244, 0.5);
+    background-color: rgba(215, 215, 244, 0.5);
   }
   .col-item .price
   {
-      /*width: 50%;*/
-      float: left;
-      margin-top: 5px;
+    /*width: 50%;*/
+    float: left;
+    margin-top: 5px;
   }
 
   .col-item .price h5
   {
-      line-height: 20px;
-      margin: 0;
+    line-height: 20px;
+    margin: 0;
   }
 
   .price-text-color
   {
-      color: #00990E;
+    color: #00990E;
   }
 
   .col-item .info .rating
   {
-      color: #003399;
+    color: #003399;
   }
 
   .col-item .rating
   {
-      /*width: 50%;*/
-      float: left;
-      font-size: 17px;
-      text-align: right;
-      line-height: 52px;
-      margin-bottom: 10px;
-      height: 52px;
+    /*width: 50%;*/
+    float: left;
+    font-size: 17px;
+    text-align: right;
+    line-height: 52px;
+    margin-bottom: 10px;
+    height: 52px;
   }
 
   .col-item .separator
   {
-      border-top: 1px solid #FFCCCC;
+    border-top: 1px solid #FFCCCC;
   }
 
   .clear-left
   {
-      clear: left;
+    clear: left;
   }
 
   .col-item .separator p
   {
-      line-height: 20px;
-      margin-bottom: 0;
-      margin-top: 10px;
-      text-align: center;
+    line-height: 20px;
+    margin-bottom: 0;
+    margin-top: 10px;
+    text-align: center;
   }
 
   .col-item .separator p i
   {
-      margin-right: 5px;
+    margin-right: 5px;
   }
   .col-item .btn-add
   {
-      width: 50%;
-      float: left;
+    width: 50%;
+    float: left;
   }
 
   .col-item .btn-add
   {
-      border-right: 1px solid #CC9999;
+    border-right: 1px solid #CC9999;
   }
 
   .col-item .btn-details
   {
-      width: 50%;
-      float: left;
-      padding-left: 10px;
+    width: 50%;
+    float: left;
+    padding-left: 10px;
   }
   .controls
   {
-      margin-top: 20px;
+    margin-top: 20px;
   }
   [data-slide="prev"]
   {
-      margin-right: 10px;
+    margin-right: 10px;
   }
   </style>
 

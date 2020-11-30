@@ -152,7 +152,6 @@
           <products></products>
 
         </div>
-        <button id="show-modal" @click="showModal = true">Show Modal</button>
         <div class="portfolio-grid portfolio-gallery grid-3 gutter" style="position: relative; height: 1162.64px;">
 
         </div>
