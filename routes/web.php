@@ -5,6 +5,8 @@ use App\Http\Livewire\Products;
 use App\Http\Livewire\SupplierProducts;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
+use App\Http\Livewire\Blogs;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -36,7 +38,7 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::get('/dashboard', function () {
       return view('dashboard');
     })->name('dashboard');
-    Route::get('products', Products::class)->middleware('auth:sanctum');
+    Route::get('products', Products::class,'render')->middleware('auth:sanctum');
   });
 });
 /*Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
