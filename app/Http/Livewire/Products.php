@@ -1,13 +1,15 @@
 <?php
 
 namespace App\Http\Livewire;
-
 use Auth;
 use Livewire\Component;
 use App\Models\Product;
+use Livewire\WithFileUploads;
+use Illuminate\Support\Facades\Storage;
 
 class Products extends Component
 {
+  use WithFileUploads;
   public $products, $name, $description,$keywords,$product_id, $image;
   public $isOpen = 0;
 
@@ -78,11 +80,11 @@ class Products extends Component
       'description' => 'required',
       'keywords' => 'required',
     ]);
-
+    $imageName = $this->image->store('images', 'public');
     Product::updateOrCreate(['id' => $this->product_id], [
       'name' => $this->name,
       'description' => $this->description,
-      'image'=>$this->image,
+      'image'=>Storage::url($imageName),//$this->image
       'keywords'=>$this->keywords,
       'user_id'=>Auth::id()
     ]);

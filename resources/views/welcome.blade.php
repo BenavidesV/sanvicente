@@ -45,12 +45,12 @@
   <script src="assets/vendor/respond.min.js"></script>
   <![endif]-->
 </head>
-<body style="">
+<body>
 
-  <!--preloader start-->
-  <!--<div id="preloader">-->
-  <!--<div id="loader"></div>-->
-  <!--</div>-->
+  <!--preloader start
+  <div id="preloader">
+  <div id="loader"></div>
+  </div>
   <!--preloader end-->
 
   <!--header start-->
@@ -90,7 +90,7 @@
 <a href="#portfolio" class="mouse"></a>
 </div>
 </section>-->
-<section>
+<section id="section-star">
   <div>
     <video id="video1" width="100%"preload="" autoplay="" muted="" playsinline="" loop="">
       <source src="video2.mp4" type="video/mp4">
@@ -108,7 +108,7 @@
       <div class="row">
         <div class="col-md-12">
           <div class="clients-logo flex">
-            <a onclick="myFunction('mora')" href="#portfolio" id="turismo" class="client-item"><img src="./assets/Devil/Turismo.png" alt="turismo"></a>
+            <a onclick="myFunction('turismo')" href="#portfolio" id="turismo" class="client-item"><img src="./assets/Devil/Turismo.png" alt="turismo"></a>
             <a onclick="myFunction('hogar')" href="#portfolio" id="salud" class="client-item"><img src="./assets/Devil/hogar.png" alt="Hogar y salud"></a>
             <a onclick="myFunction('agricola')" href="#portfolio" id="agricola" class="client-item"><img src="./assets/Devil/agricola.png" alt="agricultura"></a>
             <a onclick="myFunction('tecnologia')" href="#portfolio" id="tecnologia" class="client-item"><img src="./assets/Devil/Tecnologia.png" alt="tecnologia"></a>
@@ -233,7 +233,7 @@
 
 <!--scripts-->
 <script async src="{{mix('js/app.js')}}"></script>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 <script src="/assets/Devil/owl.carousel.min.js"></script>
 <script src="./assets/Devil/jquery.nav.js"></script>
@@ -272,9 +272,6 @@
 function myFunction(e) {
   document.getElementById("p-search").value =e;
 
-
-  //document.getElementById("p-search").click();
-  //document.getElementById("jose").style.background='#000000';
 }
 $("[data-trigger]").on("click", function(e){
   e.preventDefault();
