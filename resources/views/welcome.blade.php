@@ -217,8 +217,8 @@
     <div class="row">
       <div class="col-md-12 text-center">
         <ul class="social-link wow fadeInUp" style="visibility: hidden; animation-name: none;">
-          <li><a href="https://www.facebook.com/SanVicenteCR#" target="_blank"><i class="fab fa-facebook"></i></a></li>
-          <li><a href="https://www.instagram.com/sanvicentecr/#" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+          <li><a title="facebook" href="https://www.facebook.com/SanVicenteCR#" target="_blank"><i class="fab fa-facebook"></i></a></li>
+          <li><a title="instagram" href="https://www.instagram.com/sanvicentecr/#" target="_blank"><i class="fab fa-linkedin"></i></a></li>
           <li><a title="Inscribirse" href="/login" target="_blank"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-bounding-box-circles" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" d="M2 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zM0 2a2 2 0 0 1 3.937-.5h8.126A2 2 0 1 1 14.5 3.937v8.126a2 2 0 1 1-2.437 2.437H3.937A2 2 0 1 1 1.5 12.063V3.937A2 2 0 0 1 0 2zm2.5 1.937v8.126c.703.18 1.256.734 1.437 1.437h8.126a2.004 2.004 0 0 1 1.437-1.437V3.937A2.004 2.004 0 0 1 12.063 2.5H3.937A2.004 2.004 0 0 1 2.5 3.937zM14 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zM2 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm12 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
           </svg></a></li>
@@ -268,9 +268,26 @@
 <script src="./assets/Devil/scripts.js"></script>
 
 <script>
+function myFunction(query) {
+  document.getElementById("p-search").value =query;
+  let params = {
+      query
+  };
+  axios.get(`/api/search`, {params})
+      .then(res => {
+          if (res.data === 'ok')
+              console.log('request sent successfully')
+          if (Object.keys(res.data).length === 0){
+            console.log("No hay resultados");
+            alert("No hay resultados para ese criterio de busqueda");
+            document.getElementById("p-search").value ='';
+            this.myFunction('');
+          }
 
-function myFunction(e) {
-  document.getElementById("p-search").value =e;
+      }).catch(err => {
+      console.log(err)
+  })
+  //this.$store.dispatch('SEARCH_PRODUCTS', e);
 
 }
 $("[data-trigger]").on("click", function(e){

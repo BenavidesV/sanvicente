@@ -5,7 +5,7 @@
                    aria-label="Nombre o descripción"
                    aria-describedby="basic-addon2">
             <div class="input-group-append">
-                <button id="jose" class="btn btn-primary" @click="searchProducts" @keyup.enter="searchProducts" type="button">
+                <button class="btn btn-primary" @click="searchProducts" @keyup.enter="searchProducts" type="button">
                     Buscar
                 </button>
             </div>
@@ -36,6 +36,10 @@
 
     }
 </script>
-
 <style scoped>
+@media (max-width: 480px) {
+    .btn {
+        margin-bottom: 0;
+    }
+}
 </style>

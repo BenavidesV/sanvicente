@@ -90,7 +90,7 @@ class Products extends Component
     ]);
 
     session()->flash('message',
-    $this->product_id ? 'Producto actualizado satisfactoriamente.' : 'Productp creado satisfactoriamente.');
+    $this->product_id ? 'Producto actualizado satisfactoriamente.' : 'Producto creado satisfactoriamente.');
 
     $this->closeModal();
     $this->resetInputFields();

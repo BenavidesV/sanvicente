@@ -13,11 +13,25 @@ class UserController extends Controller
     return view('users', compact('users'));
   }
 
+  public function adminUsers()
+  {
+    $users = User::whereNotNull('approved_at')->get();
+
+    return view('admin-users', compact('users'));
+  }
+
   public function approve($user_id)
   {
     $user = User::findOrFail($user_id);
     $user->update(['approved_at' => now()]);
 
-    return redirect()->route('admin.users.index')->withMessage('Aprobaci[on realizada satisfactoriamente]');
+    return redirect()->route('admin.users.index')->withMessage('Aprobación realizada satisfactoriamente]');
+  }
+
+  public function adminUser($user_id)
+  {
+    $user = User::findOrFail($user_id);
+
+    return view('profile-user/show', compact('user'));
   }
 }

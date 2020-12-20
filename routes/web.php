@@ -5,7 +5,8 @@ use App\Http\Livewire\Products;
 use App\Http\Livewire\SupplierProducts;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
-use App\Http\Livewire\Blogs;
+use App\Http\Livewire\ProfileUser;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -31,7 +32,10 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
 
   Route::middleware(['admin'])->group(function () {
         Route::get('/users', [UserController::class,'index'])->name('admin.users.index');
+        Route::get('/admin-users', [UserController::class,'adminUsers'])->name('admin.users.profile');
         Route::get('/users/{user_id}/approve', [UserController::class,'approve'])->name('admin.users.approve');
+        Route::get('profiles', ProfileUser::class);
+
     });
 
   Route::middleware(['approved'])->group(function () {
@@ -46,4 +50,4 @@ return view('dashboard');
 })->name('dashboard');
 */
 
-Route::get('image/{filename}', [ProductController::class,'showImage'])->name('displayImage');
+/*Route::get('image/{filename}', [ProductController::class,'showImage'])->name('displayImage');*/
