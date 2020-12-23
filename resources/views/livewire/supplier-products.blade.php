@@ -1,4 +1,7 @@
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html lang="en">
+<head>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
   <meta name="description" content="Pagina promocional de San Vicente Ciudad Quesada">
   <meta name="keywords" content="San Vicente, naturaleza, agricultura, turismo,
@@ -24,7 +27,125 @@
   {{--bxslider--}}
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <style>
+  .fa {
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+  }
+
+  .fa:hover {
+    opacity: 0.7;
+  }
+
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+
+  .fa-google {
+    background: #dd4b39;
+    color: white;
+  }
+
+  .fa-linkedin {
+    background: #007bb5;
+    color: white;
+  }
+
+  .fa-youtube {
+    background: #bb0000;
+    color: white;
+  }
+
+  .fa-instagram {
+    background: #125688;
+    color: white;
+  }
+
+  .fa-pinterest {
+    background: #cb2027;
+    color: white;
+  }
+
+  .fa-snapchat-ghost {
+    background: #fffc00;
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  }
+
+  .fa-skype {
+    background: #00aff0;
+    color: white;
+  }
+
+  .fa-android {
+    background: #a4c639;
+    color: white;
+  }
+
+  .fa-dribbble {
+    background: #ea4c89;
+    color: white;
+  }
+
+  .fa-vimeo {
+    background: #45bbff;
+    color: white;
+  }
+
+  .fa-tumblr {
+    background: #2c4762;
+    color: white;
+  }
+
+  .fa-vine {
+    background: #00b489;
+    color: white;
+  }
+
+  .fa-foursquare {
+    background: #45bbff;
+    color: white;
+  }
+
+  .fa-stumbleupon {
+    background: #eb4924;
+    color: white;
+  }
+
+  .fa-flickr {
+    background: #f40083;
+    color: white;
+  }
+
+  .fa-yahoo {
+    background: #430297;
+    color: white;
+  }
+
+  .fa-soundcloud {
+    background: #ff5500;
+    color: white;
+  }
+
+  .fa-reddit {
+    background: #ff5700;
+    color: white;
+  }
+
+  .fa-rss {
+    background: #ff6600;
+    color: white;
+  }
   body {
 
     background-image: url("/sanvicente.jpg");
@@ -32,7 +153,8 @@
     background-attachment: fixed;
     background-size: cover;
   }
-  </style>
+</style>
+
 </head>
 
 <body>
@@ -54,7 +176,7 @@
         <!------ Include the above in your HEAD tag ---------->
         <div class="card render-sv">
           <div class="card">
-            <a href="/" title="Volver a la página principal"><i class="fas fa-long-arrow-alt-left"></i></a>
+            <a href="/" title="Volver a la página principal"><i class="fas fa-arrow-left"></i></a>
             <div class="card-header text-center">
               Información del producto
             </div>
@@ -74,68 +196,46 @@
 
               <h5 class="card-title">{{ $supplier->name }}</h5>
               <p class="card-text">{{ $supplier->email }}</p>
+              <!-- Add font awesome icons -->
+              @if($supplier->social_network_1)
+                <a href="{{$supplier->social_network_1}}" class="fa fa-facebook"></a>
+              @endif
+              @if($supplier->social_network_2)
+                <a href="{{$supplier->social_network_2}}" class="fa fa-whatsapp"></a>
+              @endif
+              @if($supplier->social_network_3)
+                <a href="{{$supplier->social_network_3}}" class="fa fa-instagram"></a>
+              @endif
+              @if($supplier->social_network_4)
+
+              <a href="{{$supplier->social_network_4}}" class="fa fa-android"></a>
+              @endif
+
+              <!--<a href="#" class="fa fa-twitter"></a>
+              <a href="#" class="fa fa-google"></a>
+              <a href="#" class="fa fa-linkedin"></a>
+              <a href="#" class="fa fa-youtube"></a>
+              <a href="#" class="fa fa-instagram"></a>
+              <a href="#" class="fa fa-pinterest"></a>
+              <a href="#" class="fa fa-snapchat-ghost"></a>
+              <a href="#" class="fa fa-skype"></a>
+              <a href="#" class="fa fa-dribbble"></a>
+              <a href="#" class="fa fa-vimeo"></a>
+              <a href="#" class="fa fa-tumblr"></a>
+              <a href="#" class="fa fa-vine"></a>
+              <a href="#" class="fa fa-foursquare"></a>
+              <a href="#" class="fa fa-stumbleupon"></a>
+              <a href="#" class="fa fa-flickr"></a>
+              <a href="#" class="fa fa-yahoo"></a>
+              <a href="#" class="fa fa-reddit"></a>
+              <a href="#" class="fa fa-rss"></a>-->
               <!--redes sociales, telefono, whatsAp-->
             </div>
 
           </div>
 
           <div class="container-fluid">
-            <h2 class="text-center mb-3">Además ofrece</h2>
-            <div class="container">
-              <div class="row">
-                <div class="row">
-                  <div class="col-md-3">
-                    <!-- Controls -->
-                    <div class="controls pull-right hidden-xs">
-                      <a class="left fa fa-chevron-left btn btn" href="#carousel-example"
-                      data-slide="prev"></a><a class="right fa fa-chevron-right btn" href="#carousel-example"
-                      data-slide="next"></a>
-                    </div>
-                  </div>
-                </div>
-                <div id="carousel-example" class="carousel slide hidden-xs" data-ride="carousel">
-                  <!-- Wrapper for slides -->
-                  <div class="carousel-inner">
-                    <div class="item active">
-                      <div class="row">
-                        @foreach($products as $index=>$product)
-                        @if ($product->id != $product1->id)
-                        <div class="col-sm-3">
-                          <div class="col-item">
-                            <div class="info">
-                              <div class="row">
-                                <div class="price col-md-6">
-                                  <h5>{{ $product->name }}</h5>
-                                </div>
-                                <div class="rating hidden-sm col-md-6">
-                                  <i class="fas fa-exclamation"></i>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="photo">
-                              <img src="{{ asset($product->image) }}" title="product.description" :alt="product.name" class="img-responsive" />
-                            </div>
-                            <div class="info">
-                              <div class="separator clear-left">
-                                <p class="btn-add">
-                                  {{$product->description}}
-                                </p>
-                              </div>
-                              <div class="clearfix">
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        @endif
-
-                        @endforeach
-                      </div>
-
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <h2 class="text-center mb-3"><a href="/supplier/{{$supplier->id}}">Conocer más</a></h2>
           </div>
         </div>
       </div>

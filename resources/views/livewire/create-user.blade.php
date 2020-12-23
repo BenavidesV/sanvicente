@@ -14,10 +14,57 @@
               <input type="text" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="exampleFormControlInput1" placeholder="Enter Title" wire:model="name">
               @error('name') <span class="text-red-500">{{ $message }}</span>@enderror
             </div>
-            <div class="mb-4">
-              <label for="exampleFormControlInput2" class="block text-gray-700 text-sm font-bold mb-2">Email:</label>
-              <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="exampleFormControlInput2" wire:model="email" placeholder="Enter Description"></textarea>
+            <div class="block">
+              <x-jet-label for="email" value="{{ __('Email') }}" />
+              <x-jet-input id="email" class="block mt-1 w-full" type="email" name="email" wire:model="email" required autofocus />
               @error('email') <span class="text-red-500">{{ $message }}</span>@enderror
+            </div>
+            <div class="mt-4">
+              <x-jet-label for="password" value="{{ __('Clave') }}" />
+              <x-jet-input id="password" class="block mt-1 w-full"
+              type="password" name="password" wire:model="password"
+              required autocomplete="new-password" />
+              @error('password') <span class="text-red-500">{{ $message }}</span>@enderror
+            </div>
+            <div class="mb-4">
+              <label for="exampleFormControlInput1" class="block text-gray-700 text-sm font-bold mb-2">Cédula:</label>
+              <input type="number" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              id="exampleFormControlInput1" placeholder="Ingrese su cédula" wire:model="identification">
+              @error('identification') <span class="text-red-500">{{ $message }}</span>@enderror
+            </div>
+            <div class="mb-4">
+              <label for="exampleFormControlInput1" class="block text-gray-700 text-sm font-bold mb-2">Dirección:</label>
+              <address>
+                <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                id="exampleFormControlInput1" placeholder="Ingrese su cédula" wire:model="identification"></textarea>
+              </address>
+              @error('address') <span class="text-red-500">{{ $message }}</span>@enderror
+            </div>
+            <div class="mb-4">
+              <label for="exampleFormControlInput1" class="block text-gray-700 text-sm font-bold mb-2">Teléfono:</label>
+              <input type="number" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              id="exampleFormControlInput1" placeholder="Ingrese su cédula" wire:model="phone">
+              @error('phone') <span class="text-red-500">{{ $message }}</span>@enderror
+            </div>
+            <div class="mb-4">
+              <label for="exampleFormControlInput1" class="block text-gray-700 text-sm font-bold mb-2">facebook:</label>
+              <input type="text" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="exampleFormControlInput1" wire:model="social_network_1">
+              @error('social_network_1') <span class="text-red-500">{{ $message }}</span>@enderror
+            </div>
+            <div class="mb-4">
+              <label for="exampleFormControlInput1" class="block text-gray-700 text-sm font-bold mb-2">whatsapp:</label>
+              <input type="text" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="exampleFormControlInput1" wire:model="social_network_2">
+              @error('social_network_2') <span class="text-red-500">{{ $message }}</span>@enderror
+            </div>
+            <div class="mb-4">
+              <label for="exampleFormControlInput1" class="block text-gray-700 text-sm font-bold mb-2">instagram:</label>
+              <input type="text" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="exampleFormControlInput1" wire:model="social_network_3">
+              @error('social_network_3') <span class="text-red-500">{{ $message }}</span>@enderror
+            </div>
+            <div class="mb-4">
+              <label for="exampleFormControlInput1" class="block text-gray-700 text-sm font-bold mb-2">Otra red social:</label>
+              <input type="text" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="exampleFormControlInput1" wire:model="social_network_4">
+              @error('social_network_4') <span class="text-red-500">{{ $message }}</span>@enderror
             </div>
           </div>
         </div>

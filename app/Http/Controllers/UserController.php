@@ -25,7 +25,15 @@ class UserController extends Controller
     $user = User::findOrFail($user_id);
     $user->update(['approved_at' => now()]);
 
-    return redirect()->route('admin.users.index')->withMessage('Aprobación realizada satisfactoriamente]');
+    return redirect()->route('admin.users.index')->withMessage('Aprobación realizada satisfactoriamente');
+  }
+
+  public function disapprove($user_id)
+  {
+    $user = User::findOrFail($user_id);
+    $user->update(['approved_at' => null]);
+
+    return redirect()->route('admin.users.index')->withMessage('Inhabilitación realizada satisfactoriamente]');
   }
 
   public function adminUser($user_id)

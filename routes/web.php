@@ -26,6 +26,9 @@ Route::get('/search', function () {
   return view('search');
 });
 Route::get('supplier-products/{user_id}/{product_id}', [SupplierProducts::class, 'render']);
+Route::get('/supplier/{supplier_id}', function () {
+  return view('supplier-info');
+});
 //Route::get('/supplier/{user_id}/', [UserController::class,'approve'])->name('admin.users.approve');
 Route::middleware(['auth:sanctum', 'verified'])->group(function () {
   Route::get('/approval', [HomeController::class,'approval'])->name('approval');
@@ -34,6 +37,7 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
         Route::get('/users', [UserController::class,'index'])->name('admin.users.index');
         Route::get('/admin-users', [UserController::class,'adminUsers'])->name('admin.users.profile');
         Route::get('/users/{user_id}/approve', [UserController::class,'approve'])->name('admin.users.approve');
+        Route::get('/users/{user_id}/disapprove', [UserController::class,'disapprove'])->name('admin.users.disapprove');
         Route::get('profiles', ProfileUser::class);
 
     });

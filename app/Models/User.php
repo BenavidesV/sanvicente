@@ -28,7 +28,14 @@ class User extends Authenticatable
         'email',
         'password',
         'admin',
-        'approved_at'
+        'approved_at',
+        'identification',
+        'address',
+        'phone',
+        'social_network_1',//whatsapp
+        'social_network_2',//facebook
+        'social_network_3',//instagram
+        'social_network_4'//telegram, other
     ];
 
     /**

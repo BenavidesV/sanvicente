@@ -26,6 +26,14 @@ class CreateUsersTable extends Migration
             $table->boolean('admin')->default(false);
             $table->timestamp('approved_at')->nullable();
 
+            $table->string('identification')->unique();
+            $table->string('address')->nullable();
+            $table->string('phone')->nullable();
+            $table->string('social_network_1')->nullable();
+            $table->string('social_network_2')->nullable();
+            $table->string('social_network_3')->nullable();
+            $table->string('social_network_4')->nullable();
+
             $table->timestamps();
         });
     }

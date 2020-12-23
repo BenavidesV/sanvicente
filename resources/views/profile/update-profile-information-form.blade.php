@@ -51,6 +51,12 @@
                 <x-jet-input-error for="photo" class="mt-2" />
             </div>
         @endif
+        <!-- identification -->
+        <div class="col-span-6 sm:col-span-4">
+            <x-jet-label for="identification" value="{{ __('Cédula') }}" />
+            <x-jet-input id="identification" type="number" class="mt-1 block w-full" wire:model.defer="state.identification" autocomplete="identification" />
+            <x-jet-input-error for="identification" class="mt-2" />
+        </div>
 
         <!-- Name -->
         <div class="col-span-6 sm:col-span-4">
@@ -64,6 +70,37 @@
             <x-jet-label for="email" value="{{ __('Email') }}" />
             <x-jet-input id="email" type="email" class="mt-1 block w-full" wire:model.defer="state.email" />
             <x-jet-input-error for="email" class="mt-2" />
+        </div>
+
+        <!-- Phone -->
+        <div class="col-span-6 sm:col-span-4">
+            <x-jet-label for="phone" value="{{ __('Teléfono') }}" />
+            <x-jet-input id="phone" type="number" class="mt-1 block w-full" wire:model.defer="state.phone" autocomplete="phone" />
+            <x-jet-input-error for="phone" class="mt-2" />
+        </div>
+        <!-- Red social 1 -->
+        <div class="col-span-6 sm:col-span-4">
+            <x-jet-label for="social_network_1" value="{{ __('facebook') }}" />
+            <x-jet-input id="social_network_1" type="text" class="mt-1 block w-full" wire:model.defer="state.social_network_1" autocomplete="social_network_1" />
+            <x-jet-input-error for="social_network_1" class="mt-2" />
+        </div>
+        <!-- Red social 2 -->
+        <div class="col-span-6 sm:col-span-4">
+            <x-jet-label for="social_network_2" value="{{ __('whatsapp') }}" />
+            <x-jet-input id="social_network_2" type="text" class="mt-1 block w-full" wire:model.defer="state.social_network_2" autocomplete="social_network_2" />
+            <x-jet-input-error for="social_network_2" class="mt-2" />
+        </div>
+        <!-- Red social 3 -->
+        <div class="col-span-6 sm:col-span-4">
+            <x-jet-label for="social_network_3" value="{{ __('instagram') }}" />
+            <x-jet-input id="social_network_3" type="text" class="mt-1 block w-full" wire:model.defer="state.social_network_3" autocomplete="social_network_3" />
+            <x-jet-input-error for="social_network_3" class="mt-2" />
+        </div>
+        <!-- Red social 4 -->
+        <div class="col-span-6 sm:col-span-4">
+            <x-jet-label for="social_network_4" value="{{ __('Otra red social') }}" />
+            <x-jet-input id="social_network_4" type="text" class="mt-1 block w-full" wire:model.defer="state.social_network_4" autocomplete="social_network_4" />
+            <x-jet-input-error for="social_network_4" class="mt-2" />
         </div>
     </x-slot>
 
