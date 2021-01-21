@@ -650,7 +650,7 @@ banner
     width: 100%;
     padding: 0;
 
-    background: url(../sanvicente.jpg) no-repeat center center;
+    background: url(/sanvicente.JPEG) no-repeat center center;
     background-attachment: fixed;
     background-size: cover;
 }
@@ -1187,7 +1187,7 @@ banner
     height: 600px;
     padding: 0;
 
-    background: url('../sanvicente.jpg') no-repeat center bottom;
+    background: url('/sanvicente.JPEG') no-repeat center bottom;
     background-attachment: fixed;
     background-size: cover;
 }
@@ -1196,7 +1196,7 @@ banner
 {
     height: 500px;
 
-    background-image: url('../../sanvicente.jpg');
+    background-image: url('../../sanvicente.JPEG');
 }
 
 .slide-img-1
@@ -1461,7 +1461,8 @@ section
 
 .section-gray
 {
-    background: #f3f3f3;
+  /*background: url('sanvicente.JPEG') no-repeat center bottom;*/
+  background: #f3f3f3;
 }
 
 .section-dark

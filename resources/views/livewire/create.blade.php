@@ -23,6 +23,23 @@
               <label for="exampleFormControlInput2" class="block text-gray-700 text-sm font-bold mb-2">Palabras clave:</label>
               <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="exampleFormControlInput2" wire:model="keywords" placeholder="Ingrese palabras clave para este producto"></textarea>
               @error('keywords') <span class="text-red-500">{{ $message }}</span>@enderror
+              <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                <option selected disabled>Seleccione una categoría</option>
+                <option value="verduras, frutas, legumbres">Verduras, Frutas y Legumbres</option>
+                <option value="lacteos">Lácteos</option>
+                <option value="carnes">Carnes</option>
+                <option value="hornamentales">Hornamentales</option>
+                <option value="hogar">Hogar</option>
+
+                <option value="hoteleria, hospedaje">Hotelería y hospedaje</option>
+                <option value="soda, restaurante">Soda y restaurante</option>
+                <option value="mecanicos">Mecánicos</option>
+                <option value="limpieza">Limpieza</option>
+                <option value="turismo">Turismo</option>
+                <option value="tecnologia">Tecnología</option>
+
+                
+              </select>
             </div>
             <div class="mb-4">
               <label for="exampleFormControlInput2" class="block text-gray-700 text-sm font-bold mb-2">Imagen:</label>

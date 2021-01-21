@@ -133,21 +133,21 @@
           <div class="card card-body">
             <h5 class="dropdown-item underline_h5">Productos</h5>
             <hr/>
-            <a class="dropdown-item" href="#">Verduras, Frutas y Legumbres</a>
-            <a class="dropdown-item" href="#">Lácteos</a>
-            <a class="dropdown-item" href="#">Carnes</a>
-            <a class="dropdown-item" href="#">Dulces</a>
-            <a class="dropdown-item" href="#">Hornamentales</a>
-            <a class="dropdown-item" href="#">Hogar</a>
+            <a class="dropdown-item" onclick="myFunction('verduras')" href="#portfolio" id="verduras">Verduras, Frutas y Legumbres</a>
+            <a class="dropdown-item" onclick="myFunction('lacteos')" href="#portfolio" id="lacteos">Lácteos</a>
+            <a class="dropdown-item" onclick="myFunction('carnes')" href="#portfolio" id="carnes">Carnes</a>
+            <a class="dropdown-item" onclick="myFunction('dulces')" href="#portfolio" id="dulces">Dulces</a>
+            <a class="dropdown-item" onclick="myFunction('hornamentales')" href="#portfolio" id="hornamentales">Hornamentales</a>
+            <a class="dropdown-item" onclick="myFunction('hogar')" href="#portfolio" id="hogar">Hogar</a>
             <hr/>
             <h5 class="dropdown-item underline_h5">Servicios</h5>
             <hr/>
-            <a class="dropdown-item" href="#">Hotelería y hospedaje</a>
-            <a class="dropdown-item" href="#">Soda y restaurante</a>
-            <a class="dropdown-item" href="#">Mecánicos</a>
-            <a class="dropdown-item" href="#">Limpieza</a>
-            <a class="dropdown-item" href="#">Turismo</a>
-            <a class="dropdown-item" href="#">Tecnología</a>
+            <a class="dropdown-item" id="hospedaje" onclick="myFunction('hospedaje')" href="#portfolio">Hotelería y hospedaje</a>
+            <a class="dropdown-item" id="restaurante" onclick="myFunction('restaurante')" href="#portfolio">Soda y restaurante</a>
+            <a class="dropdown-item" id="mecanicos" onclick="myFunction('mecanico')" href="#portfolio">Mecánicos</a>
+            <a class="dropdown-item" id="limpieza" onclick="myFunction('limpieza')" href="#portfolio">Limpieza</a>
+            <a class="dropdown-item" id="turismo" onclick="myFunction('turismo')" href="#portfolio">Turismo</a>
+            <a class="dropdown-item" id="tecnologia" onclick="myFunction('tecnologia')" href="#portfolio">Tecnología</a>
           </div>
         </div>
 
@@ -299,7 +299,7 @@ function myFunction(query) {
       console.log("No hay resultados");
       alert("No hay resultados para ese criterio de busqueda");
       document.getElementById("p-search").value ='';
-      this.myFunction('');
+      //this.myFunction('');
     }
 
   }).catch(err => {
