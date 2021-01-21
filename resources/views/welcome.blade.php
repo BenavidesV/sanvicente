@@ -3,9 +3,11 @@
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
   <meta name="description" content="Pagina promocional de San Vicente Ciudad Quesada">
-  <meta name="keywords" content="San Vicente, naturaleza, agricultura, turismo, turismo sostenible, bosque, Ciudad Quesada, comida, tours">
+  <meta name="keywords" content="San Vicente, naturaleza, agricultura, turismo, turismo sostenible, bosque, Ciudad Quesada, comida, tours,
+  hospedaje, barato, San Vicente Hideaway, pueblo, buena cuchara, tesoro natural, familia, arracache">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
   <meta name="author" content="Novlic">
+  <link rel="canonical" href="http://adi-sanvicente.com/" />
 
 
   <!--site title-->
@@ -23,7 +25,8 @@
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
   {{--bxslider--}}
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 
   <!--owl carousel-->
   <link href="./assets/Devil/owl.carousel.min.css" rel="stylesheet">
@@ -44,19 +47,20 @@
   <script src="assets/vendor/html5shiv.js"></script>
   <script src="assets/vendor/respond.min.js"></script>
   <![endif]-->
+
 </head>
 <body>
 
   <!--preloader start
   <div id="preloader">
   <div id="loader"></div>
-  </div>
-  <!--preloader end-->
+</div>
+<!--preloader end-->
 
-  <!--header start-->
-  <!--<header class="header">
-  <nav class="navbar navbar-inverse navbar-black navbar-fixed-top navbar-expanded">
-  <div class="container">
+<!--header start-->
+<!--<header class="header">
+<nav class="navbar navbar-inverse navbar-black navbar-fixed-top navbar-expanded">
+<div class="container">
 
 </div>
 </nav>
@@ -65,114 +69,128 @@
 
 <!--hero section start-->
 <div id="home">
-  <!--<section class="hero hero-short-banner">
-  <div class="hero-overlay"></div>
-  <div class="hero-content dark-txt-- light-txt ">
-  <div class="container">
-  <div class="row">
-  <div class="col-md-12">
+  <section class="hero hero-short-banner">
+    <div class="hero-overlay"></div>
+    <div class="hero-content dark-txt-- light-txt ">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
 
-  <h2 class="text-uppercase">
-  San Vicente: <span class="typist-text typist-blink" data-typist="Alegría, Dedicación, Perseverancia,">Somos gente</span>
-</h2>
-
-<div class="social-link">
-<a href="http://mosaddek.com/theme/devil/home-portfolio.html#"><i class="fa fa-facebook"></i></a>
-<a href="http://mosaddek.com/theme/devil/home-portfolio.html#"><i class="fa fa-twitter"></i></a>
-<a href="http://mosaddek.com/theme/devil/home-portfolio.html#"><i class="fa fa-google-plus"></i></a>
-<a href="http://mosaddek.com/theme/devil/home-portfolio.html#"><i class="fa fa-linkedin"></i></a>
-</div>
-</div>
-</div>
-</div>
+            <h4 class="text-uppercase">
+              San Vicente: <span class="typist-text typist-blink" data-typist="Alegría, Dedicación, Perseverancia,">Calor humano</span>
+            </h4>
+            <!--
+            <div class="social-link">
+            <a href="http://mosaddek.com/theme/devil/home-portfolio.html#"><i class="fa fa-facebook"></i></a>
+            <a href="http://mosaddek.com/theme/devil/home-portfolio.html#"><i class="fa fa-twitter"></i></a>
+            <a href="http://mosaddek.com/theme/devil/home-portfolio.html#"><i class="fa fa-google-plus"></i></a>
+            <a href="http://mosaddek.com/theme/devil/home-portfolio.html#"><i class="fa fa-linkedin"></i></a>
+          </div>-->
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="go-down wow bounceInUp" data-wow-duration="1s" data-wow-delay="1s" style="visibility: visible; animation-duration: 1s; animation-delay: 1s; animation-name: bounceInUp;">
+    <a href="#portfolio" class="mouse"></a>
+  </div>
+</section>
+<!--<section id="section-star">
+<div>
+<video id="video1" width="100%"preload="" autoplay="" muted="" playsinline="" loop="">
+<source src="video2.mp4" type="video/mp4">
 </div>
 <div class="go-down wow bounceInUp" data-wow-duration="1s" data-wow-delay="1s" style="visibility: visible; animation-duration: 1s; animation-delay: 1s; animation-name: bounceInUp;">
 <a href="#portfolio" class="mouse"></a>
 </div>
 </section>-->
-<section id="section-star">
-  <div>
-    <video id="video1" width="100%"preload="" autoplay="" muted="" playsinline="" loop="">
-      <source src="video2.mp4" type="video/mp4">
-      </div>
-      <div class="go-down wow bounceInUp" data-wow-duration="1s" data-wow-delay="1s" style="visibility: visible; animation-duration: 1s; animation-delay: 1s; animation-name: bounceInUp;">
-        <a href="#portfolio" class="mouse"></a>
-      </div>
-    </section>
-  </div>
+</div>
 
-  <!--hero section end-->
-  <!--clients section start-->
-  <section class="client-section section-gray" id="section-clients">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="clients-logo flex">
-            <a onclick="myFunction('turismo')" href="#portfolio" id="turismo" class="client-item"><img src="./assets/Devil/Turismo.png" alt="turismo"></a>
-            <a onclick="myFunction('hogar')" href="#portfolio" id="salud" class="client-item"><img src="./assets/Devil/hogar.png" alt="Hogar y salud"></a>
-            <a onclick="myFunction('agricola')" href="#portfolio" id="agricola" class="client-item"><img src="./assets/Devil/agricola.png" alt="agricultura"></a>
-            <a onclick="myFunction('tecnologia')" href="#portfolio" id="tecnologia" class="client-item"><img src="./assets/Devil/Tecnologia.png" alt="tecnologia"></a>
-            <a onclick="myFunction('comida')" href="#portfolio" id="comida" class="client-item"><img src="./assets/Devil/gastronomia.png" alt="gastronomia"></a>
+<!--hero section end-->
+<!--clients section start-->
+<section class="client-section section-gray">
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+      <nav class="navbar navbar-light">
+        <div class="container-fluid" id="products_header">
+          <span
+          class="navbar-brand mb-0 h1"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-expanded="false"
+          aria-controls="collapseExample">
+          <i class="fas fa-list"></i>
+          Productos && Sevicios
+        </span>
+
+        </div>
+      </nav>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+
+        <div class="collapse" id="navbarNavDropdown">
+          <div class="card card-body">
+            <h5 class="dropdown-item underline_h5">Productos</h5>
+            <hr/>
+            <a class="dropdown-item" href="#">Verduras, Frutas y Legumbres</a>
+            <a class="dropdown-item" href="#">Lácteos</a>
+            <a class="dropdown-item" href="#">Carnes</a>
+            <a class="dropdown-item" href="#">Dulces</a>
+            <a class="dropdown-item" href="#">Hornamentales</a>
+            <a class="dropdown-item" href="#">Hogar</a>
+            <hr/>
+            <h5 class="dropdown-item underline_h5">Servicios</h5>
+            <hr/>
+            <a class="dropdown-item" href="#">Hotelería y hospedaje</a>
+            <a class="dropdown-item" href="#">Soda y restaurante</a>
+            <a class="dropdown-item" href="#">Mecánicos</a>
+            <a class="dropdown-item" href="#">Limpieza</a>
+            <a class="dropdown-item" href="#">Turismo</a>
+            <a class="dropdown-item" href="#">Tecnología</a>
           </div>
         </div>
+
+
       </div>
     </div>
-  </section>
-  <!--clients section end-->
-  <!--clients section start-->
-  <section class="client-section section-gray" id="section-clients-mobile">
+  </nav>
+</section>
+<!--clients section end-->
+<!--clients section start-->
+
+<!--clients section end-->
+
+<!--portfolio section start-->
+<div class="section-wrapper" id="portfolio">
+  <section class="section-space p-bot-0">
     <div class="container">
-      <b class="screen-overlay"></b>
-      <svg width="1em" height="1em"data-trigger="#navbar_main" viewBox="0 0 16 16" class=" sidenav bi bi-arrow-left-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.5.5a.5.5 0 0 0 0-1H5.707l2.147-2.146a.5.5 0 1 0-.708-.708l-3 3a.5.5 0 0 0 0 .708l3 3a.5.5 0 0 0 .708-.708L5.707 8.5H11.5z"/>
-      </svg>
+      <div id="app">
+        <searchbar></searchbar>
+        <products></products>
 
-      <nav id="navbar_main" class="mobile-offcanvas navbar navbar-expand-lg navbar-dark bg-primary">
-        <div class="offcanvas-header">
-          <h5  class="py-2 text-white">Productos y servicios</h5>
-        </div>
-        <ul class="navbar-nav">
-          <li class="nav-item"> <a onclick="myFunction('turismo')" class="nav-link" href="#portfolio">Turismo </a> </li>
-          <li class="nav-item"> <a onclick="myFunction('agricola')" class="nav-link" href="#portfolio">Agricultura && Ganadería </a> </li>
-          <li class="nav-item"> <a onclick="myFunction('tecnologia')" class="nav-link" href="#portfolio">Tecnología</a> </li>
-          <li class="nav-item"> <a onclick="myFunction('comida')" class="nav-link" href="#portfolio">Gastronomía</a> </li>
-          <li class="nav-item"> <a onclick="myFunction('hogar')" class="nav-link" href="#portfolio">Hogar & Salud</a> </li>
-        </ul>
-      </nav>
+      </div>
+      <div class="portfolio-grid portfolio-gallery grid-3 gutter" style="position: relative; height: 1162.64px;">
+
+      </div>
     </div>
   </section>
-  <!--clients section end-->
-
-  <!--portfolio section start-->
-  <div class="section-wrapper" id="portfolio">
-    <section class="section-space p-bot-0">
-      <div class="container">
-        <div id="app">
-          <searchbar></searchbar>
-          <products></products>
-
-        </div>
-        <div class="portfolio-grid portfolio-gallery grid-3 gutter" style="position: relative; height: 1162.64px;">
-
-        </div>
-      </div>
-    </section>
-  </div>
-  <!--portfolio section end-->
+</div>
+<!--portfolio section end-->
 
 
-  <!--fun factor section start-->
-  <!--
-  <section class="section-space parallax parallax-funfactor light-txt">
-  <div class="container">
-  <div class="row">
+<!--fun factor section start-->
+<!--
+<section class="section-space parallax parallax-funfactor light-txt">
+<div class="container">
+<div class="row">
 
-  <div class="col-md-3 col-sm-6">
-  <div class="fun-box text-center">
-  <i class="icon-lightbulb"></i>
+<div class="col-md-3 col-sm-6">
+<div class="fun-box text-center">
+<i class="icon-lightbulb"></i>
 
-  <div class="value" data-target="310">0</div>
-  <div class="title">completed project</div>
+<div class="value" data-target="310">0</div>
+<div class="title">completed project</div>
 </div>
 </div>
 
@@ -271,21 +289,21 @@
 function myFunction(query) {
   document.getElementById("p-search").value =query;
   let params = {
-      query
+    query
   };
   axios.get(`/api/search`, {params})
-      .then(res => {
-          if (res.data === 'ok')
-              console.log('request sent successfully')
-          if (Object.keys(res.data).length === 0){
-            console.log("No hay resultados");
-            alert("No hay resultados para ese criterio de busqueda");
-            document.getElementById("p-search").value ='';
-            this.myFunction('');
-          }
+  .then(res => {
+    if (res.data === 'ok')
+    console.log('request sent successfully')
+    if (Object.keys(res.data).length === 0){
+      console.log("No hay resultados");
+      alert("No hay resultados para ese criterio de busqueda");
+      document.getElementById("p-search").value ='';
+      this.myFunction('');
+    }
 
-      }).catch(err => {
-      console.log(err)
+  }).catch(err => {
+    console.log(err)
   })
   //this.$store.dispatch('SEARCH_PRODUCTS', e);
 

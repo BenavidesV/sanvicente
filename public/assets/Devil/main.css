@@ -32,6 +32,7 @@ typography
 #lateral-button{
   transform:rotateY(90)
 }
+/*.hide-me[aria-expanded="true"] {display: none;}*/
 .sidenav {
   height: 2%;
   width: 2rem;
@@ -85,16 +86,7 @@ typography
     transform: translateX(0);
   }
 }
-@media only screen and (max-width: 749px){
-#section-clients {
-    display: none;
-}
-}
-@media only screen and (min-width: 749px){
-#section-clients-mobile {
-    display: none;
-}
-}
+
 
 /* Add a black background color to the top navigation */
 .topnav {
@@ -181,6 +173,7 @@ typography
 
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
 @media screen and (max-width: 600px) {
+  #products_header{ display:none;}
   .topnav a:not(:first-child), .dropdown .dropbtn {
     display: none;
   }

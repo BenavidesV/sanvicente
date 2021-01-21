@@ -26,7 +26,7 @@
    z-index: 1;
 }
 nav{
-   
+
    width: 100%;
 }
 .links,.links-hidden{
@@ -52,9 +52,9 @@ nav{
    display: none;
 }
 @media screen and (max-width: 880px) {
-      nav a:not(:first-child) {
+      /*nav a:not(:first-child) {
       display: none;
-   }
+   }*/
    nav a.hamburger {
       float: right;
       display: block;
