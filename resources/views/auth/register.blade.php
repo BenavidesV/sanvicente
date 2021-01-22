@@ -42,19 +42,19 @@
             </div>
             <div>
                 <x-jet-label for="social_network_1" value="{{ __('facebook') }}" />
-                <x-jet-input id="social_network_1" class="block mt-1 w-full" type="text" name="social_network_1" :value="old('social_network_1')" required autofocus autocomplete="social_network_1" />
+                <x-jet-input id="social_network_1" class="block mt-1 w-full" type="text" name="social_network_1" :value="old('social_network_1')" autofocus autocomplete="social_network_1" />
             </div>
             <div>
                 <x-jet-label for="social_network_2" value="{{ __('whatsapp') }}" />
-                <x-jet-input id="social_network_2" class="block mt-1 w-full" type="text" name="social_network_2" :value="old('social_network_2')" required autofocus autocomplete="social_network_2" />
+                <x-jet-input id="social_network_2" class="block mt-1 w-full" type="text" name="social_network_2" :value="old('social_network_2')" autofocus autocomplete="social_network_2" />
             </div>
             <div>
                 <x-jet-label for="social_network_3" value="{{ __('instagram') }}" />
-                <x-jet-input id="social_network_3" class="block mt-1 w-full" type="text" name="social_network_3" :value="old('social_network_3')" required autofocus autocomplete="social_network_3" />
+                <x-jet-input id="social_network_3" class="block mt-1 w-full" type="text" name="social_network_3" :value="old('social_network_3')" autofocus autocomplete="social_network_3" />
             </div>
             <div>
                 <x-jet-label for="social_network_4" value="{{ __('Otra red social') }}" />
-                <x-jet-input id="social_network_4" class="block mt-1 w-full" type="text" name="social_network_4" :value="old('social_network_4')" required autofocus autocomplete="social_network_4" />
+                <x-jet-input id="social_network_4" class="block mt-1 w-full" type="text" name="social_network_4" :value="old('social_network_4')" autofocus autocomplete="social_network_4" />
             </div>
             <div class="flex items-center justify-end mt-4">
                 <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">

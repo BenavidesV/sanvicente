@@ -36,14 +36,14 @@
               <label for="exampleFormControlInput1" class="block text-gray-700 text-sm font-bold mb-2">Dirección:</label>
               <address>
                 <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                id="exampleFormControlInput1" placeholder="Ingrese su cédula" wire:model="identification"></textarea>
+                id="exampleFormControlInput1" placeholder="Ingrese su dirección" wire:model="address"></textarea>
               </address>
               @error('address') <span class="text-red-500">{{ $message }}</span>@enderror
             </div>
             <div class="mb-4">
               <label for="exampleFormControlInput1" class="block text-gray-700 text-sm font-bold mb-2">Teléfono:</label>
               <input type="number" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              id="exampleFormControlInput1" placeholder="Ingrese su cédula" wire:model="phone">
+              id="exampleFormControlInput1" placeholder="Ingrese su teléfono" wire:model="phone">
               @error('phone') <span class="text-red-500">{{ $message }}</span>@enderror
             </div>
             <div class="mb-4">

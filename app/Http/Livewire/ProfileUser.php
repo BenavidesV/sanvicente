@@ -55,6 +55,13 @@ class ProfileUser extends Component
     $this->name = '';
     $this->email = '';
     $this->user_id = '';
+    $this->identification = '';
+    $this->address = '';
+    $this->phone = '';
+    $this->social_network_1 = '';
+    $this->social_network_2 = '';
+    $this->social_network_3 = '';
+    $this->social_network_4 = '';
   }
 
   /**
@@ -67,11 +74,19 @@ class ProfileUser extends Component
     $this->validate([
       'name' => 'required',
       'email' => 'required',
+      'social_network_1'=>'nullable',
     ]);
 
     User::updateOrCreate(['id' => $this->user_id], [
       'name' => $this->name,
-      'email' => $this->email
+      'email' => $this->email,
+      'address' => $this->address,
+      'identification' => $this->identification,
+      'phone' => $this->phone,
+      'social_network_1' => $this->social_network_1,
+      'social_network_2' => $this->social_network_2,
+      'social_network_3' => $this->social_network_3,
+      'social_network_4' => $this->social_network_4
     ]);
 
     session()->flash('message',
@@ -91,6 +106,13 @@ class ProfileUser extends Component
     $this->user_id = $id;
     $this->name = $user->name;
     $this->email = $user->email;
+    $this->identification = $user->identification;
+    $this->address = $user->address;
+    $this->phone = $user->phone;
+    $this->social_network_1 = $user->social_network_1;
+    $this->social_network_2 = $user->social_network_2;
+    $this->social_network_3 = $user->social_network_3;
+    $this->social_network_4 = $user->social_network_4;
 
     $this->openModal();
   }
