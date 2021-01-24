@@ -35,7 +35,8 @@ class User extends Authenticatable
         'social_network_1',//whatsapp
         'social_network_2',//facebook
         'social_network_3',//instagram
-        'social_network_4'//telegram, other
+        'social_network_4',//telegram, other
+        'history'//brief description of bussiness
     ];
 
     /**

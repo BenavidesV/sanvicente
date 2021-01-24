@@ -4,11 +4,9 @@
             <input v-model="query" type="text" id="p-search" class="form-control" placeholder="buscar por nombre o descripción"
                    aria-label="Nombre o descripción"
                    aria-describedby="basic-addon2">
-            <div class="input-group-append">
-                <button class="btn btn-primary" @click="searchProducts" @keyup.enter="searchProducts" type="button">
-                    Buscar
-                </button>
-            </div>
+                   <button class="btn btn-primary" @click="searchProducts" @keyup.enter="searchProducts" type="button">
+                       <i class="fas fa-search"></i>
+                   </button>
         </div>
     </div>
 </template>

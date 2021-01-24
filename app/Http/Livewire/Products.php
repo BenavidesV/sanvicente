@@ -80,14 +80,29 @@ class Products extends Component
       'description' => 'required',
       'keywords' => 'required',
     ]);
-    $imageName = $this->image->store('images', 'public');
-    Product::updateOrCreate(['id' => $this->product_id], [
-      'name' => $this->name,
-      'description' => $this->description,
-      'image'=>Storage::url($imageName),//$this->image
-      'keywords'=>$this->keywords,
-      'user_id'=>Auth::id()
-    ]);
+    try {
+      if (!is_string($this->image)) {
+        //dd("Has file");
+        $imageName = $this->image->store('images', 'public');
+        Product::updateOrCreate(['id' => $this->product_id], [
+          'name' => $this->name,
+          'description' => $this->description,
+          'image'=>Storage::url($imageName),//$this->image
+          'keywords'=>$this->keywords,
+          'user_id'=>Auth::id()
+        ]);
+      }else{
+        //dd("El mismo");
+        Product::updateOrCreate(['id' => $this->product_id], [
+          'name' => $this->name,
+          'description' => $this->description,
+          'keywords'=>$this->keywords,
+          'user_id'=>Auth::id()
+        ]);
+      }
+    } catch (\Exception $e) {
+      dd("error: ",$e);
+    }
 
     session()->flash('message',
     $this->product_id ? 'Producto actualizado satisfactoriamente.' : 'Producto creado satisfactoriamente.');

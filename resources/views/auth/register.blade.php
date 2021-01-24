@@ -56,6 +56,10 @@
                 <x-jet-label for="social_network_4" value="{{ __('Otra red social') }}" />
                 <x-jet-input id="social_network_4" class="block mt-1 w-full" type="text" name="social_network_4" :value="old('social_network_4')" autofocus autocomplete="social_network_4" />
             </div>
+            <div>
+                <x-jet-label for="history" value="{{ __('Historia y descripción del emprendimiento') }}" />
+                <textarea id="history" rows="15" cols="50" class="block mt-1 w-full" type="text" name="history" :value="old('history')" autofocus autocomplete="history"></textarea>
+            </div>
             <div class="flex items-center justify-end mt-4">
                 <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">
                     {{ __('Ya tiene cuenta?') }}

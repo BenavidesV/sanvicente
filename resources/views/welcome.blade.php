@@ -120,6 +120,7 @@
           aria-controls="collapseExample">
           <i class="fas fa-list"></i>
           Productos && Sevicios
+          <i class="fas fa-share"></i>
         </span>
 
         </div>

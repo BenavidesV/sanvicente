@@ -40,6 +40,6 @@ class UserController extends Controller
   {
     $user = User::findOrFail($user_id);
 
-    return view('profile-user/show', compact('user'));
+    return view('supplier-info', compact('user'));
   }
 }

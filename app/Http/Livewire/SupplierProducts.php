@@ -18,4 +18,12 @@ class SupplierProducts extends Component
     return view('livewire.supplier-products',['products'=>$this->products,
     'supplier'=>$this->supplier, 'product1'=>$this->product1]);//->with();
   }
+
+  public function userProfile($user_id)
+  {
+    $user = User::findOrFail($user_id);
+    //dd($user);
+
+    return view('supplier-info', ['user' => $user]);
+  }
 }

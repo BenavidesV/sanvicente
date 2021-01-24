@@ -19,7 +19,7 @@ class CreateProductsTable extends Migration
       $table->string('name');
       $table->text('description');
       $table->string('keywords');
-      $table->text('image');
+      $table->string('image')->default('/storage/images/5t2a51LSvwnu0QIdqMJKKkGAjT6vK0UVGmsqde7C.png');//->default('storage/images/qDDur4dBQdhPi1kPNdYR8ostZpU9caYr5M3oClfn.png');///storage/images/qDDur4dBQdhPi1kPNdYR8ostZpU9caYr5M3oClfn.png
       $table->unsignedBigInteger('user_id');
       $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
     });

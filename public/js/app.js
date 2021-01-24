@@ -2005,8 +2005,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Searchbar",
   data: function data() {
@@ -26801,28 +26799,26 @@ var render = function() {
         }
       }),
       _vm._v(" "),
-      _c("div", { staticClass: "input-group-append" }, [
-        _c(
-          "button",
-          {
-            staticClass: "btn btn-primary",
-            attrs: { type: "button" },
-            on: {
-              click: _vm.searchProducts,
-              keyup: function($event) {
-                if (
-                  !$event.type.indexOf("key") &&
-                  _vm._k($event.keyCode, "enter", 13, $event.key, "Enter")
-                ) {
-                  return null
-                }
-                return _vm.searchProducts($event)
+      _c(
+        "button",
+        {
+          staticClass: "btn btn-primary",
+          attrs: { type: "button" },
+          on: {
+            click: _vm.searchProducts,
+            keyup: function($event) {
+              if (
+                !$event.type.indexOf("key") &&
+                _vm._k($event.keyCode, "enter", 13, $event.key, "Enter")
+              ) {
+                return null
               }
+              return _vm.searchProducts($event)
             }
-          },
-          [_vm._v("\n                Buscar\n            ")]
-        )
-      ])
+          }
+        },
+        [_c("i", { staticClass: "fas fa-search" })]
+      )
     ])
   ])
 }

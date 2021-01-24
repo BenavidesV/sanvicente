@@ -102,6 +102,12 @@
             <x-jet-input id="social_network_4" type="text" class="mt-1 block w-full" wire:model.defer="state.social_network_4" autocomplete="social_network_4" />
             <x-jet-input-error for="social_network_4" class="mt-2" />
         </div>
+        <!-- Historia del negocio -->
+        <div class="col-span-6 sm:col-span-4">
+            <x-jet-label for="history" value="{{ __('Muestre al mundo como es su negocio') }}" />
+            <textarea id="history" rows=15 type="text" class="mt-1 block w-full" wire:model.defer="state.history" autocomplete="history"></textarea>
+            <x-jet-input-error for="history" class="mt-2" />
+        </div>
     </x-slot>
 
     <x-slot name="actions">

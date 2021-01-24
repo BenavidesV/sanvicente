@@ -2,34 +2,45 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 html,body {
-    width:100vw;
-    height: 100vh;
-    margin: 0;
+  width:100vw;
+  height: 100vh;
+  margin: 0;
 }
 .underline_h5{
   text-decoration: underline;
 }
 #videoBG {
-    position:fixed;
-    z-index: -1;
+  position:fixed;
+  z-index: -1;
 }
 @media (min-aspect-ratio: 16/9) {
-    #videoBG {
-        width:100%;
-        height: auto;
-    }
+  #videoBG {
+    width:100%;
+    height: auto;
+  }
 }
 @media (max-aspect-ratio: 16/9) {
-    #videoBG {
-        width:auto;
-        height: 100%;
-    }
+  #videoBG {
+    width:auto;
+    height: 100%;
+  }
 }
 @media (max-width: 767px) {
-    #videoBG {
-        display: none;
-    }
-    body {
-        background-size: cover;
-    }
+  #videoBG {
+    display: none;
+  }
+  body {
+    background-size: cover;
+  }
+}
+textarea {
+  padding: 1rem;
+  text-align: justify;
+  -moz-text-align-last: center; /* Firefox 12+ */
+  text-align-last: center;
+  border-radius: 0.375rem;
+  border-color: #d2d6dc;
+  line-height: 1.5;
+  border-style: inset;
+  border-width: 2px;
 }

@@ -26,9 +26,7 @@ Route::get('/search', function () {
   return view('search');
 });
 Route::get('supplier-products/{user_id}/{product_id}', [SupplierProducts::class, 'render']);
-Route::get('/supplier/{supplier_id}', function () {
-  return view('supplier-info');
-});
+Route::get('/supplier/{supplier_id}', [SupplierProducts::class, 'userProfile']);
 //Route::get('/supplier/{user_id}/', [UserController::class,'approve'])->name('admin.users.approve');
 Route::middleware(['auth:sanctum', 'verified'])->group(function () {
   Route::get('/approval', [HomeController::class,'approval'])->name('approval');

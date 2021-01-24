@@ -86,7 +86,8 @@ class ProfileUser extends Component
       'social_network_1' => $this->social_network_1,
       'social_network_2' => $this->social_network_2,
       'social_network_3' => $this->social_network_3,
-      'social_network_4' => $this->social_network_4
+      'social_network_4' => $this->social_network_4,
+      'history' => $this->history
     ]);
 
     session()->flash('message',
@@ -113,6 +114,7 @@ class ProfileUser extends Component
     $this->social_network_2 = $user->social_network_2;
     $this->social_network_3 = $user->social_network_3;
     $this->social_network_4 = $user->social_network_4;
+    $this->history = $user->history;
 
     $this->openModal();
   }
