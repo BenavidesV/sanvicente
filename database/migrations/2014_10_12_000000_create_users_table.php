@@ -35,6 +35,7 @@ class CreateUsersTable extends Migration
             $table->string('social_network_4')->nullable();
 
             $table->string('history')->nullable();
+            $table->string('hashtag')->nullable();//identificador de busqueda
 
             $table->timestamps();
         });

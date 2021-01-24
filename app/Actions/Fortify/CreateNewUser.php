@@ -27,7 +27,7 @@ class CreateNewUser implements CreatesNewUsers
       'identification' => ['required'],
       'password' => $this->passwordRules(),
       ])->validate();
-      
+
       $user = User::create([
         'name' => $input['name'],
         'email' => $input['email'],
@@ -39,6 +39,7 @@ class CreateNewUser implements CreatesNewUsers
         'social_network_3' => $input['social_network_3'],
         'social_network_4' => $input['social_network_4'],
         'password' => Hash::make($input['password']),
+        'history' => $input['history'],
       ]);
 
       $admin = User::where('admin', 1)->latest()->first();

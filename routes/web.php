@@ -22,6 +22,7 @@ use App\Http\Livewire\ProfileUser;
 Route::get('/', function () {
   return view('welcome');
 });
+
 Route::get('/search', function () {
   return view('search');
 });

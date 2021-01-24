@@ -49,7 +49,8 @@ class UpdateUserProfileInformation implements UpdatesUserProfileInformation
                 'social_network_2' => $input['social_network_2'],
                 'social_network_3' => $input['social_network_3'],
                 'social_network_4' => $input['social_network_4'],
-                'history' => $input['history']
+                'history' => $input['history'],
+                'hashtag' => $input['hashtag']
             ])->save();
         }
     }

@@ -42,11 +42,30 @@
   <link href="./assets/Devil/main.css" rel="stylesheet">
   <link href="./assets/Devil/menu-list.css" rel="stylesheet">
 
-  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-  <!--[if lt IE 9]>
-  <script src="assets/vendor/html5shiv.js"></script>
-  <script src="assets/vendor/respond.min.js"></script>
-  <![endif]-->
+  <script>
+  function myFunction(query) {
+    document.getElementById("p-search").value =query;
+    let params = {
+      query
+    };
+    axios.get(`/api/search`, {params})
+    .then(res => {
+      if (res.data === 'ok')
+      console.log('request sent successfully')
+      if (Object.keys(res.data).length === 0){
+        console.log("No hay resultados");
+        alert("No hay resultados para ese criterio de busqueda");
+        document.getElementById("p-search").value ='';
+        //this.myFunction('');
+      }
+
+    }).catch(err => {
+      console.log(err)
+    })
+    //this.$store.dispatch('SEARCH_PRODUCTS', e);
+
+  }
+  </script>
 
 </head>
 <body>
@@ -235,7 +254,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12 text-center">
-        <ul class="social-link wow fadeInUp" style="visibility: hidden; animation-name: none;">
+        <ul class="social-link wow fadeInUp" >
           <li><a title="facebook" href="https://www.facebook.com/SanVicenteCR#" target="_blank"><i class="fab fa-facebook"></i></a></li>
           <li><a title="instagram" href="https://www.instagram.com/sanvicentecr/#" target="_blank"><i class="fab fa-linkedin"></i></a></li>
           <li><a title="Inscribirse" href="/login" target="_blank"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-bounding-box-circles" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -287,28 +306,7 @@
 <script src="./assets/Devil/scripts.js"></script>
 
 <script>
-function myFunction(query) {
-  document.getElementById("p-search").value =query;
-  let params = {
-    query
-  };
-  axios.get(`/api/search`, {params})
-  .then(res => {
-    if (res.data === 'ok')
-    console.log('request sent successfully')
-    if (Object.keys(res.data).length === 0){
-      console.log("No hay resultados");
-      alert("No hay resultados para ese criterio de busqueda");
-      document.getElementById("p-search").value ='';
-      //this.myFunction('');
-    }
 
-  }).catch(err => {
-    console.log(err)
-  })
-  //this.$store.dispatch('SEARCH_PRODUCTS', e);
-
-}
 $("[data-trigger]").on("click", function(e){
   e.preventDefault();
   e.stopPropagation();

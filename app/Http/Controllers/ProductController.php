@@ -27,7 +27,7 @@ class ProductController extends Controller
   //fetch all products
   public function get(Request $request)
   {
-    $products = Product::all();
+    $products = Product::inRandomOrder()->get();//all();
     return response()->json($products);
   }
   //show image

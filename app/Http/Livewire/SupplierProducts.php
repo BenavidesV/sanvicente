@@ -21,9 +21,10 @@ class SupplierProducts extends Component
 
   public function userProfile($user_id)
   {
+    $this->products = Product::where('user_id',$user_id)->get();
     $user = User::findOrFail($user_id);
     //dd($user);
 
-    return view('supplier-info', ['user' => $user]);
+    return view('supplier-info', ['products'=>$this->products,'user' => $user]);
   }
 }

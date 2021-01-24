@@ -102,6 +102,12 @@
             <x-jet-input id="social_network_4" type="text" class="mt-1 block w-full" wire:model.defer="state.social_network_4" autocomplete="social_network_4" />
             <x-jet-input-error for="social_network_4" class="mt-2" />
         </div>
+        <!-- Hashtag -->
+        <div class="col-span-6 sm:col-span-4">
+            <x-jet-label for="hashtag" value="{{ __('Hashtag (identificador de búsqueda)') }}" />
+            <x-jet-input id="hashtag" type="text" class="mt-1 block w-full" wire:model.defer="state.hashtag" autocomplete="hashtag" />
+            <x-jet-input-error for="hashtag" class="mt-2" />
+        </div>
         <!-- Historia del negocio -->
         <div class="col-span-6 sm:col-span-4">
             <x-jet-label for="history" value="{{ __('Muestre al mundo como es su negocio') }}" />
