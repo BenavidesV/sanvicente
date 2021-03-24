@@ -1,4 +1,5 @@
-<head>
+<div>
+  <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
 
@@ -21,7 +22,8 @@
         </div>
       </div>
       @endif
-      <button wire:click="create()" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded my-3">Crear producto</button>
+      <button wire:click.prevent="create()" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded my-3">Crear producto</button>
+      <label>{{$isOpen}} Gracias</label>
       @if($isOpen)
       @include('livewire.create')
       @endif
@@ -61,4 +63,5 @@
       </div>
     </div>
   </div>
+</div>
 </div>

@@ -31,8 +31,8 @@ class Products extends Component
   */
   public function create()
   {
-    $this->resetInputFields();
     $this->openModal();
+    //dd("thisOpen: "+$this->isOpen);
   }
 
   /**
