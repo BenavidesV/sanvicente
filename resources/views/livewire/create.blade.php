@@ -41,14 +41,14 @@
             </div>
             <div class="mb-4">
               <label for="exampleFormControlInput2" class="block text-gray-700 text-sm font-bold mb-2">Imagen:</label>
-              <input type="file" name="image" class="custom-file-input" id="image" wire:model="image" >
-              @error('keywords') <span class="text-red-500">{{ $message }}</span>@enderror
+              <input type="file" name="image" id="image_" wire:model="image" >
+              @error('image') <span class="text-red-500">{{ $message }}</span>@enderror
             </div>
           </div>
         </div>
         <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
           <span class="flex w-full rounded-md shadow-sm sm:ml-3 sm:w-auto">
-            <button wire:click.prevent="store()" type="button" class="inline-flex justify-center w-full rounded-md border border-transparent px-4 py-2 bg-green-600 text-base leading-6 font-medium text-white shadow-sm hover:bg-green-500 focus:outline-none focus:border-green-700 focus:shadow-outline-green transition ease-in-out duration-150 sm:text-sm sm:leading-5">
+            <button wire:click.prevent="store()" type="button" class="justify-center w-full rounded-md border border-transparent px-4 py-2 bg-green-600 text-base leading-6 font-medium text-white shadow-sm hover:bg-green-500 focus:outline-none focus:border-green-700 focus:shadow-outline-green transition ease-in-out duration-150 sm:text-sm sm:leading-5">
               Guardar
             </button>
           </span>
