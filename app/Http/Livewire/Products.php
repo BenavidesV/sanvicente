@@ -81,7 +81,7 @@ class Products extends Component
       'keywords' => 'required',
     ]);
     try {
-      if (!is_string($this->image)) {
+      if (!empty($this->image)) {
         //dd("Has file");
         $imageName = $this->image->store('images', 'public');
         Product::updateOrCreate(['id' => $this->product_id], [
