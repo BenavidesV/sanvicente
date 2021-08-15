@@ -43,6 +43,8 @@
               <label for="exampleFormControlInput2" class="block text-gray-700 text-sm font-bold mb-2">Imagen:</label>
               <input type="file" name="image" id="image_" wire:model="image" >
               @error('image') <span class="text-red-500">{{ $message }}</span>@enderror
+              <div wire:loading wire:target="image">Uploading...</div>
+
             </div>
           </div>
         </div>
