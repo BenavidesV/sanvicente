@@ -7,7 +7,8 @@ use Livewire\Component;
 class ProfileUser extends Component
 {
   public $users, $name, $email, $user_id, $password, $identification,$address,
-  $phone,$social_network_1, $social_network_2, $social_network_3, $social_network_4;
+  $phone,$social_network_1, $social_network_2, $social_network_3,
+  $social_network_4, $hashtag;
   public $isOpen = 0;
 
   public function render()
@@ -63,6 +64,7 @@ class ProfileUser extends Component
     $this->social_network_2 = '';
     $this->social_network_3 = '';
     $this->social_network_4 = '';
+    $this->hashtag = '';
   }
 
   /**
@@ -88,11 +90,12 @@ class ProfileUser extends Component
       'social_network_2' => $this->social_network_2,
       'social_network_3' => $this->social_network_3,
       'social_network_4' => $this->social_network_4,
-      'history' => $this->history
+      'history' => $this->history,
+      'hashtag' = $this->hashtag,
     ]);
 
     session()->flash('message',
-    $this->user_id ? 'User Updated Successfully.' : 'User Created Successfully.');
+    $this->user_id ? 'Usuario actualizado satisfactoriamente.' : 'Usuario creado satisfactoriamente.');
 
     $this->closeModal();
     $this->resetInputFields();
@@ -116,6 +119,7 @@ class ProfileUser extends Component
     $this->social_network_3 = $user->social_network_3;
     $this->social_network_4 = $user->social_network_4;
     $this->history = $user->history;
+    $this->hashtag = $user->hashtag;
 
     $this->openModal();
   }
@@ -128,6 +132,6 @@ class ProfileUser extends Component
   public function delete($id)
   {
     User::find($id)->delete();
-    session()->flash('message', 'User Deleted Successfully.');
+    session()->flash('message', 'Usuario eliminado satisfactoriamente.');
   }
 }
