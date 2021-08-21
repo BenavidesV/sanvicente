@@ -6,7 +6,8 @@ use Livewire\Component;
 
 class ProfileUser extends Component
 {
-  public $users, $name, $email, $user_id;
+  public $users, $name, $email, $user_id, $password, $identification,$address,
+  $phone,$social_network_1, $social_network_2, $social_network_3, $social_network_4;
   public $isOpen = 0;
 
   public function render()
