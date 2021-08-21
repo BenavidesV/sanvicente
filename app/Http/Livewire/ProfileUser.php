@@ -8,7 +8,7 @@ class ProfileUser extends Component
 {
   public $users, $name, $email, $user_id, $password, $identification,$address,
   $phone,$social_network_1, $social_network_2, $social_network_3,
-  $social_network_4, $hashtag;
+  $social_network_4, $hashtag, $history;
   public $isOpen = 0;
 
   public function render()
@@ -65,6 +65,7 @@ class ProfileUser extends Component
     $this->social_network_3 = '';
     $this->social_network_4 = '';
     $this->hashtag = '';
+    $this->history = '';
   }
 
   /**
