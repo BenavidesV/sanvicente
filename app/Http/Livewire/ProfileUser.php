@@ -91,7 +91,7 @@ class ProfileUser extends Component
       'social_network_3' => $this->social_network_3,
       'social_network_4' => $this->social_network_4,
       'history' => $this->history,
-      'hashtag' = $this->hashtag,
+      'hashtag' => $this->hashtag,
     ]);
 
     session()->flash('message',
