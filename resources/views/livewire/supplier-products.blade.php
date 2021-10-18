@@ -201,7 +201,7 @@
                 <a href="{{$supplier->social_network_1}}" class="fa fa-facebook"></a>
               @endif
               @if($supplier->social_network_2)
-                <a href='https://wa.me/506'+"{{$supplier->social_network_2}}+?text=Hola%20necesito%20información" class="fa fa-whatsapp"></a>
+                <a href="{{'https://wa.me/506'.$supplier->social_network_2.'?text=Hola%20necesito%20información'}}" class="fa fa-whatsapp"></a>
               @endif
               @if($supplier->social_network_3)
                 <a href="{{$supplier->social_network_3}}" class="fa fa-instagram"></a>
